@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Cuaca Cari Kota</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌤️ Pencarian Cuaca Kota</h1>
+        
+        <!-- Formulir Pencarian Kota -->
+        <form id="search-form">
+            <input 
+                type="text" 
+                id="city-input" 
+                placeholder="Masukan Kota" 
+                required 
+                autocomplete="off"
+            >
+            <button type="submit" id="search-btn">Cari</button>
+        </form>
+
+        <!-- Pesan Status Error / Loading -->
+        <p id="status-message" class="status-message"></p>
+
+        <!-- Kartu Hasil Cuaca -->
+        <div id="weather-card" class="weather-card hidden">
+            <h2 id="city-name">---</h2>
+            <div class="temp-display">
+                <span id="temperature">--</span>°C
+            </div>
+            <p id="weather-desc" class="desc">--</p>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <span>Kelembapan</span>
+                    <strong id="humidity">--%</strong>
+                </div>
+                <div class="detail-item">
+                    <span>Kecepatan Angin</span>
+                    <strong id="wind-speed">-- km/jam</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
